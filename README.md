@@ -5,3 +5,7 @@ To install, run
 
 
 To run, 
+
+`npm run build`
+
+Will create a `.build` folder with the transpiled javascript code, and execute init.js in node
