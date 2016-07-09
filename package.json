@@ -1,0 +1,24 @@
+{
+  "name": "raspberry_pi_base",
+  "version": "1.0.0",
+  "description": "Coder Dojo Toledo Raspberry Pi Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && node ./.build/init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderdojotoledo/raspberry_pi_base.git"
+  },
+  "author": "Alexander Mattoni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderdojotoledo/raspberry_pi_base/issues"
+  },
+  "homepage": "https://github.com/coderdojotoledo/raspberry_pi_base#readme",
+  "devDependencies": {
+    "tslint": "^3.13.0",
+    "typescript": "^1.8.10"
+  }
+}
