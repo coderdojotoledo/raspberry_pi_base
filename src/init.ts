@@ -1,5 +1,6 @@
 let gpio = require("pi-gpio");
 
+gpio.close(16);
 console.log("BUILT");
 class LED {
     private pin = 16;
