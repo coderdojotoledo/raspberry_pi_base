@@ -23,8 +23,10 @@ function init() {
     console.log("start...");
     let l = new LED();
     l.on();
-    setTimeout(() => l.off(), 2000);
-    init();
+    setTimeout(() => {
+        init();
+        l.off();
+    }, 2000);
 }
 
 init();
