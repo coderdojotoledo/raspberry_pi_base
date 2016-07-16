@@ -19,9 +19,9 @@ class LED {
     }
 }
 
+let l = new LED();
 function init() {
     console.log("start...");
-    let l = new LED();
     l.on();
     setTimeout(() => {
         init();
