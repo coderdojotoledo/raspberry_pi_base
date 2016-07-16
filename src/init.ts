@@ -1,6 +1,4 @@
-if (!gpio) {
-    gpio = require("pi-gpio");
-}
+import "pi-gpio";
 
 function flash() {
     gpio.open(16, "output", function(err) {		// Open pin 16 for output 
