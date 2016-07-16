@@ -1,13 +1,22 @@
-import "pi-gpio";
+let gpio = require("pi-gpio");
 
-function flash() {
-    gpio.open(16, "output", function(err) {		// Open pin 16 for output 
-        gpio.write(16, 1, function() {			// Set pin 16 high (1) 
-            setTimeout(() => {
-                gpio.close(16)
-                flash();
-            }, 2000);
-        });
-    });
+class LED {
+    private pin = 16;
+
+    constructor() {
+        gpio.open(16, "output");
+    }
+
+    public on() {
+        gpio.write(16, 1);
+    }
+
+    public off() {
+        gpio.close(16);
+    }
 }
 
+let l = new LED();
+
+setTimeout(() => l.on, 2000);
+setTimeout(() => l.off(), 4000);
