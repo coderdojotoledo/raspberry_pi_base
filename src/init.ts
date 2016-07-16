@@ -12,7 +12,7 @@ class LED {
     }
 
     public off() {
-        gpio.close(16);
+        gpio.write(16, 0);
     }
 }
 
