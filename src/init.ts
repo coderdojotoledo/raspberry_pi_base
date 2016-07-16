@@ -1,6 +1,6 @@
 let gpio = require("pi-gpio");
 
-console.log("STARTING");
+console.log("BUILT");
 class LED {
     private pin = 16;
 
@@ -20,10 +20,10 @@ class LED {
 }
 
 function init() {
+    console.log("start...");
     let l = new LED();
-
-    setTimeout(() => l.on, 2000);
-    setTimeout(() => l.off(), 4000);
+    l.on();
+    setTimeout(() => l.off(), 2000);
     init();
 }
 
