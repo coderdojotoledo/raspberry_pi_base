@@ -27,3 +27,10 @@ setInterval(() => {
         light.off();
     }, 2000);
 }, 4000);
+
+process.on('SIGINT', function() {
+    console.log("Caught interrupt signal");
+    gpio.close(16, () => {
+        process.exit();
+    });
+});
