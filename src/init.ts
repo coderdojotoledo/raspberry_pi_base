@@ -6,17 +6,19 @@ class LED {
 
     public on() {
         gpio.open(16, "output", () => {
-            gpio.write(16, 1);
-            console.log("ON");
-            gpio.close(16);
+            gpio.write(16, 1, () => {
+                console.log("ON");
+                gpio.close(16);
+            });
         });
     }
 
     public off() {
         gpio.open(16, "output", () => {
-            gpio.write(16, 0);
-            console.log("OFF");
-            gpio.close(16);
+            gpio.write(16, 0, () => {
+                console.log("OFF");
+                gpio.close(16);
+            });
         });
     }
 }
